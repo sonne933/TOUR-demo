@@ -27,8 +27,6 @@ function showSlides(n) {
     // slides[slideImage-1].className += "fadeInLeft";
     dots[slideImage-1].className += " active";
 }
-//back top
-
 function backTop() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         document.getElementById("back_top").style.display = "block";
@@ -40,40 +38,54 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
-// validate form contact
-window.onscroll = function () {
-    scrollFunction(),
-        backTop()
+window.onscroll = function() {
+    scrollFunction();
+    backTop();
 };
-
 function scrollFunction() {
     if (document.body.scrollTop > 35 || document.documentElement.scrollTop > 35) {
-        $(document).ready(function () {
-            $(".top_bar").hide('slow');
+        document.addEventListener("DOMContentLoaded", function () {
+            var topBar = document.querySelector(".top_bar");
+            topBar.style.display = "none";
         });
 
     } else {
-        $(document).ready(function () {
-            $(".top_bar").show();
+        document.addEventListener("DOMContentLoaded", function () {
+            var topBar = document.querySelector(".top_bar");
+            topBar.style.display = "block";
         });
     }
 }
+
 $(function () {
     $("#tabs").tabs();
 });
 
-$(document).ready(function () {
-    $(".search__item").click(function () {
-        $(".input_search").toggle("slow");
-    });
-})
 
-$("#single_item").slick({
-    dots: true
-});
-$("#testimonials").slick({
-    dots: false
-});
+// $(document).ready(function () {
+//     $(".search__item").click(function () {
+//         $(".input_search").toggle("slow");
+//     });
+// })
+function clickSreach (){
+    document.getElementsByClassName(".search__item").click(function(){
+        document.getElementsByClassName(".input_search").toggle("slow");
+    })
+}
 
-// offers
+// $("#single_item").slick({
+//     dots: true
+// });
+
+
+
+// $("#testimonials").slick({
+//     dots: false
+// });
+
+// var testimonials = document.getElementById("testimonials");
+// testimonials.slick = function(options) {
+//     options.dots = false;
+// };
+
+

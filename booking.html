@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tour Viet - About</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tour Viet</title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles/css/main_style.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/Animation.css"> -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/tooltipster/dist/css/tooltipster.bundle.min.css" />
-    <script type="text/javascript" src="styles/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <script>
-        
-    </script>
+    <link rel="stylesheet" href="booking.css">
 </head>
 
 <body>
@@ -38,9 +39,9 @@
                     <div class="bar__user-regis"><a href="login.html">register</a></div>
                 </div>
             </div>
-            
+
             <div class="main_nav">
-                <div class="main_nav__logo"><a href="index.html"><img src="./images/logo.png" alt="logo"> TOUR VIET</a>
+                <div class="main_nav__logo"><a href="#"><img src="./images/logo.png" alt="logo"> TOUR VIET</a>
                 </div>
                 <div class="main_nav__menu">
                     <ul class="main_nav__list">
@@ -50,7 +51,7 @@
                         <li class="main_nav__item"><a href="booking.html">ĐẶT TOUR</a></li>
                         <li class="main_nav__item"><a href="blog.html">TIN TỨC</a></li>
                         <li class="main_nav__item"><a href="contact.html">LIÊN HỆ</a></li>
-                        
+
                     </ul>
                 </div>
                 <div class="main_nav__search">
@@ -59,109 +60,66 @@
                 </div>
             </div>
         </header>
+
         <div class="main">
-            <div class="main__slide_offers">
-                <div class="home_slide__item">
-                    <div class="home_slide__background" style="background-image: url(./images/about_slide.jpg)"></div>
-                    <div class="home__content">
-                        <div class="home__title animated bounceInDown">
-                            Giới thiệu
+
+
+            <div class="main_offers">
+                <div class="left_main">
+                    <div class="contact-info">
+                        <h2>Thông Tin</h2>
+                        <label><strong>Tên:</strong> </label>
+                        <input type="text" value="Hồng Sơn">
+                        <label><strong>Email:</strong></label>
+                        <input type="email" value="son@123gmail.com">
+                        <label><strong>Địa chỉ:</strong></label>
+                        <input type="text" value="Đà Nẵng">
+                        <label><strong>Số điện thoại:</strong></label>
+                        <input type="number" value="0768909018">
+
+                        <h3>Payment Method</h3>
+                        <label>
+                            <input type="radio" name="payment-method" value="credit-card" checked> Credit Card
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="paypal"> VNPay
+                        </label>
+                        <label>
+                            <input type="radio" name="payment-method" value="bank-transfer"> Thanh toán tại quầy
+                        </label>
+                        <button id="payment-btn">Thanh Toán</button>
+                    </div>
+                </div>
+                <div class="box main_offers__box">
+
+                    <h2 class="offers_title">Booking Tour</h2>
+
+                    <div class="offers_items">
+                        <div class="offers_item">
+                            <div class="offers_image">
+                                <div class="offers_image_background"
+                                    style="background-image: url(./images/offers_1.jpg);height: 300px; width: 230[x];">
+                                </div>
+                                <div class="offers_name"><a href="#">Tour Tây Bắc</a></div>
+                            </div>
+                            <div class="offers_content">
+                                <div class="offers_price">Tour du lịch Miền Bắc</div>
+                                <div class="tour-info">
+                                    <p><strong>Địa điểm: </strong>Tây Bắc</p>
+                                    <p><strong>Thời gian: </strong> 5 Ngày</p>
+                                    <p><strong>Số Lượng: </strong> 1 người</p>
+                                    <p><strong>Total: </strong> 750.000 VND</p>
+                                </div>
+
+
+                                <div class="offers_link"><a href="offers.html">Đọc thêm</a></div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
 
-            <!--        About us-->
-            <div class="about">
-                <div class="box about__box">
-                    <div class="about__image"><img src="./images/intro.png" alt=""></div>
-                    <div class="about__content">
-                        <div class="about__title">Về chúng tôi</div>
-                        <p class="about__text">TOUR VIET là trang website bán tour du lịch hàng đầu Việt Nam, với tiêu
-                            chí
-                            tour không hoàn, không hủy, không thay đổi lịch trình. Gía cả tốt nhất thị trường hơn hết
-                            đảm
-                            bảo cho du khách có những trải nghiệm thú vị nhất, dịch dụ chuyên nghiệp nhất khi mua tour
-                            tại
-                            đây. TOUR VIET phục vụ du khách đi tham quan du lịch trên cả 5 châu, du lịch ra nước ngoài
-                            tại
-                            đây rất được khách hàng tin tưởng và đánh giá cao.</p>
-                        <div class="button button_about">
-                            <div class="button_bcg"></div>
-                            <a href="#">Đọc thêm <span></span><span></span><span></span></a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <div class="statistic">
-                <div class="box statistic__box">
-                    <h2>Thống kê theo năm</h2>
-                    <p class="statistic__text">Thống kê số lượng khách hàng, khách hàng quay lại, các hoạt động và số
-                        lượng
-                        tour giữa năm 2021 và 2022 của chúng tôi</p>
-                    <div class="statistic__content">
-                        <div class="statistic__item">
-                            <div class="stats">
-                                <div class="stats__icon"><i class="fas fa-user-friends"></i></div>
-                                <div class="stats__content">
-                                    <div class="stats__number">13456</div>
-                                    <div class="stats__type">Khách hàng</div>
-                                </div>
-                            </div>
-                            <div class="stats__bar">
-                                <div class="stats__year">2022 <i class="fas fa-level-down-alt"></i></div>
-                                <div class="stats__bar1"></div>
-                                <div class="tooltip bar_1 stats__bar2" title="Tăng 20%"></div>
-                            </div>
-                        </div>
-                        <div class="statistic__item">
-                            <div class="stats">
-                                <div class="stats__icon"><i class="fas fa-hiking"></i></div>
-                                <div class="stats__content">
-                                    <div class="stats__number">6564</div>
-                                    <div class="stats__type">Khách hàng quay lại</div>
-                                </div>
-                            </div>
-                            <div class="stats__bar">
-                                <div class="stats__year">2022 <i class="fas fa-level-down-alt"></i></div>
-                                <div class="stats__bar1"></div>
-                                <div class="tooltip bar_2 stats__bar2" title="Giảm 10%"></div>
-                            </div>
-                        </div>
-                        <div class="statistic__item">
-                            <div class="stats">
-                                <div class="stats__icon"><i class="fas fa-umbrella-beach"></i></div>
-                                <div class="stats__content">
-                                    <div class="stats__number">906</div>
-                                    <div class="stats__type">Hoạt động</div>
-                                </div>
-                            </div>
-                            <div class="stats__bar">
-                                <div class="stats__year">2022 <i class="fas fa-level-down-alt"></i></div>
-                                <div class="stats__bar1"></div>
-                                <div class="tooltip bar_3 stats__bar2" title="Giảm 7%"></div>
-                            </div>
-                        </div>
-                        <div class="statistic__item">
-                            <div class="stats">
-                                <div class="stats__icon"><i class="fas fa-globe-asia"></i></div>
-                                <div class="stats__content">
-                                    <div class="stats__number">1320</div>
-                                    <div class="stats__type">Số lượng tour</div>
-                                </div>
-                            </div>
-                            <div class="stats__bar">
-                                <div class="stats__year">2022 <i class="fas fa-level-down-alt"></i></div>
-                                <div class="stats__bar1"></div>
-                                <div class="tooltip bar_4 stats__bar2" title="Tăng 15%"></div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
         </div>
         <footer class="footer">
             <button onclick="topFunction()" id="back_top" title="Go to top"><i class="fas fa-rocket"></i></button>
@@ -243,9 +201,10 @@
         </footer>
 
     </div>
+
 </body>
-<!-- <script src="main_js.js"></script> -->
-<script src="./script_style.js"></script>
+<!-- <script src="./main_js.js"></script> -->
 <script src="test.js"></script>
+
 
 </html>

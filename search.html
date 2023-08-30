@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tour Viet</title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles/css/main_style.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/Animation.css"> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="sreach.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Header -->
+        <header class="header">
+            <!-- Top Bar -->
+            <div class="top_bar">
+                <div class="bar__info">
+                    <div class="phone">+84 79 292 9292</div>
+                    <div class="social">
+                        <ul class="social_list">
+                            <li class="social_list_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="bar__user">
+                    <div class="bar__user-login"><a href="login.html">login</a></div>
+                    <div class="bar__user-regis"><a href="login.html">register</a></div>
+                </div>
+            </div>
+            
+            <div class="main_nav">
+                <div class="main_nav__logo"><a href="#"><img src="./images/logo.png" alt="logo"> TOUR VIET</a>
+                </div>
+                <div class="main_nav__menu">
+                    <ul class="main_nav__list">
+                        <li class="main_nav__item"><a href="index.html">TRANG CHỦ</a></li>
+                        <li class="main_nav__item"><a href="about.html">GIỚI THIỆU</a></li>
+                        <li class="main_nav__item"><a href="offers.html">ƯU ĐÃI</a></li>
+                        <li class="main_nav__item"><a href="blog.html">ĐẶT TOUR</a></li>
+                        <li class="main_nav__item"><a href="blog.html">TIN TỨC</a></li>
+                        <li class="main_nav__item"><a href="contact.html">LIÊN HỆ</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="main_nav__search">
+                    <form action=""><input class="input_search" type="text"></form>
+                    <div class="search__item"><i class="fas fa-search" onclick="location.href='search.html'"></i></div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="main">
+            
+           
+            <div class="main_offers">
+                <div class="left_main">
+                    <div class="search-container">
+                        <input type="text" class="search-input" id="location" placeholder="Tìm kiếm địa điểm..." onkeyup="showSuggestions()">
+                        <ul id="location-suggestions"></ul>
+                        
+                        <label class="filter-label" for="price">Lọc giá:</label>
+                        <select class="filter-input" id="price">
+                            <option value="asc">Tăng dần</option>
+                            <option value="desc">Giảm dần</option>
+                        </select>
+                
+                        <label class="filter-label">Khoảng giá:</label>
+                        <label class="checkbox">
+                            <input type="checkbox" id="price1">
+                            <span class="checkmark"></span>
+                            Dưới 1 triệu
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" id="price2">
+                            <span class="checkmark"></span>
+                            1 - 3 triệu
+                        </label>
+                        <label class="checkbox">
+                            <input type="checkbox" id="price3">
+                            <span class="checkmark"></span>
+                            Trên 3 triệu
+                        </label>
+                
+                        <button>Tìm kiếm</button>
+                    </div>
+                </div>
+                <div class="box main_offers__box">
+                    
+                    <h2 class="offers_title">Các Tour du lịch</h2>
+                    
+                    <!-- <div class="main_search">
+                        <div id="tabs" class="main_search__tabs">   
+                            <div id="tabs-1" class="tabs_content animated fadeIn">
+                                <form action="" class="search_content">
+                                    <div class="search_content__item">
+                                        <div style="width: 80px;">Địa điểm</div>
+                                        <input type="text" class="search_content__input">
+                                    </div>
+                                    <div class="search_content__item">
+                                        <div style="width: 80px;">Bắt đầu</div>
+                                        <input type="text" class="search_content__input" placeholder="YYYY-MM-DD">
+                                    </div>
+                                    <div class="search_content__item">
+                                        <div style="width: 80px;">Kết thúc</div>
+                                        <input type="text" class="search_content__input" placeholder="YYYY-MM-DD">
+                                    </div>
+                                    <div class="search_content__item">
+                                        <div style="width: 80px;">Người lớn</div>
+                                        <select name="adults" class="search_content__input">
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                        </select>
+                                    </div>
+                                    <div class="search_content__item">
+                                        <div>Trẻ em</div>
+                                        <select name="children" class="search_content__input">
+                                            <option>0</option>
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                        </select>
+                                    </div>
+                                    <button  class="button search_content__button">Tìm kiếm
+                                        <span></span><span></span><span></span>
+                                    </button>
+                                </form>
+                            </div>
+                          
+        
+                        </div>
+                    </div> -->
+                    <div class="offers_items">
+                        <div class="offers_item">
+                            <div class="offers_image">
+                                <div class="offers_image_background"
+                                    style="background-image: url(./images/offers_1.jpg)"></div>
+                                <div class="offers_name"><a href="#">Tour Tây Bắc</a></div>
+                            </div>
+                            <div class="offers_content">
+                                <div class="offers_price">7,000,000đ</div>
+                                <div class="rating rating_4 offers_rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="offers_text">Tour du lịch hè Mai Châu - Mộc Châu sẽ đưa bạn đến thăm thung
+                                    lũng
+                                    Mai Châu yên bình trong sớm mai, những cánh đồng lúa xanh thắm lòng người hay những
+                                    ngôi
+                                    nhà sàn nhỏ san sát nhau.</p>
+                                <div class="offers_icons">
+                                    <ul class="offers_icons_list">
+                                        <li class="offers_icons_item"><img src="./images/post.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/compass.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/bicycle.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/sailboat.png" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="offers_link"><a href="offers.html">Đọc thêm</a></div>
+                            </div>
+                        </div>
+                        <div class="offers_item">
+                            <div class="offers_image">
+                                <div class="offers_image_background"
+                                    style="background-image: url(./images/offers_2.jpg)"></div>
+                                <div class="offers_name"><a href="#">Tour Quy Nhơn</a></div>
+                            </div>
+                            <div class="offers_content">
+                                <div class="offers_price">8,690,000đ</div>
+                                <div class="rating rating_4 offers_rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="offers_text">Tour Du lịch Quy Nhơn 4 ngày từ Hà Nội - Du lịch Quy Nhơn cùng Du
+                                    Lịch Việt sẽ đưa bạn đến với Quy Nhơn – một thành phố biển xinh đẹp, không ồn ào,
+                                    cũng
+                                    không đẹp lộng lẫy bằng Nha Trang.</p>
+                                <div class="offers_icons">
+                                    <ul class="offers_icons_list">
+                                        <li class="offers_icons_item"><img src="./images/post.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/compass.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/bicycle.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/sailboat.png" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="offers_link"><a href="offers.html">Đọc thêm</a></div>
+                            </div>
+                        </div>
+                        <div class="offers_item">
+                            <div class="offers_image">
+                                <div class="offers_image_background"
+                                    style="background-image: url(./images/offers_3.jpg)"></div>
+                                <div class="offers_name"><a href="#">Tour Miền Trung</a></div>
+                            </div>
+                            <div class="offers_content">
+                                <div class="offers_price">7,299,000đ</div>
+                                <div class="rating rating_4 offers_rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="offers_text"> Tour bắt đầu từ Đà Nẵng - Bà Nà Hill - Hội An - Huế - Thánh Đại
+                                    La
+                                    Vang - Động Phong Nha - Tham gia lễ hội pháo hoa quốc tế Đà Nẵng 2023 chủ đề
+                                    "Thế giới không khoảng cách"</p>
+                                <div class="offers_icons">
+                                    <ul class="offers_icons_list">
+                                        <li class="offers_icons_item"><img src="./images/post.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/compass.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/bicycle.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/sailboat.png" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="offers_link"><a href="offers.html">Đọc thêm</a></div>
+                            </div>
+                        </div>
+                        <div class="offers_item">
+                            <div class="offers_image">
+                                <div class="offers_image_background"
+                                    style="background-image: url(./images/offers_4.jpg)"></div>
+                                <div class="offers_name"><a href="#">Tour Côn Đảo</a></div>
+                            </div>
+                            <div class="offers_content">
+                                <div class="offers_price">9,900,000đ</div>
+                                <div class="rating rating_4 offers_rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="offers_text">Du Lịch Côn Đảo - Côn Đảo được xem là hòn đảo du lịch với những
+                                    bãi
+                                    tắm hoang sơ tuyệt đẹp, làn nước trong xanh mát lạnh, bãi cát dài phẳng mịn. Được ví
+                                    như
+                                    thiên đường nghỉ dưỡng.</p>
+                                <div class="offers_icons">
+                                    <ul class="offers_icons_list">
+                                        <li class="offers_icons_item"><img src="./images/post.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/compass.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/bicycle.png" alt=""></li>
+                                        <li class="offers_icons_item"><img src="./images/sailboat.png" alt=""></li>
+                                    </ul>
+                                </div>
+                                <div class="offers_link"><a href="offers.html">Đọc thêm</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <footer class="footer">
+            <button onclick="topFunction()" id="back_top" title="Go to top"><i class="fas fa-rocket"></i></button>
+            <div class="box footer__box">
+                <div class="footer__about">
+                    <div class="footer__logo">
+                        <div class="logo">
+                            <a href="#"><img src="./images/logo.png" alt="">TOUR VIET</a>
+                        </div>
+                    </div>
+                    <p class="footer_about__text">
+                        TOUR VIET tự hào là một đơn vị tiêu biểu trong lĩnh vực tour du lịch đón nhận giải thưởng uy tín
+                        nhất dành cho cộng đồng doanh nghiệp Việt Nam.
+                    </p>
+                    <ul class="footer_social_list">
+                        <li class="footer_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="footer_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="footer_social_item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="footer__blog">
+                    <div class="footer_title">bản tin</div>
+                    <div class="footer_blog__item">
+                        <div class="footer_blog__image"><img src="./images/footer_blog_1.jpg" alt=""></div>
+                        <div class="footer_blog__content">
+                            <div class="footer_blog__title"><a href="#">Địa điểm du lịch Hè 2023</a></div>
+                            <div class="footer_blog__date">30/07/2023</div>
+                        </div>
+                    </div>
+                    <div class="footer_blog__item">
+                        <div class="footer_blog__image"><img src="./images/footer_blog_1.jpg" alt=""></div>
+                        <div class="footer_blog__content">
+                            <div class="footer_blog__title"><a href="#">Địa điểm du lịch Hè 2023</a></div>
+                            <div class="footer_blog__date">30/07/2023</div>
+                        </div>
+                    </div>
+                    <div class="footer_blog__item">
+                        <div class="footer_blog__image"><img src="./images/footer_blog_1.jpg" alt=""></div>
+                        <div class="footer_blog__content">
+                            <div class="footer_blog__title"><a href="#">Địa điểm du lịch Hè 2023</a></div>
+                            <div class="footer_blog__date">30/07/2023</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__tags">
+                    <div class="footer_title">Tags</div>
+                    <ul class="tags_list">
+                        <li class="tags_item"><a href="#">Miền Bắc</a></li>
+                        <li class="tags_item"><a href="#">Miền Trung</a></li>
+                        <li class="tags_item"><a href="#">Miền Nam</a></li>
+                        <li class="tags_item"><a href="#">Đà Nẵng</a></li>
+                        <li class="tags_item"><a href="#">Quảng Nam</a></li>
+                        <li class="tags_item"><a href="#">Huế</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <div class="footer_title">Liên hệ</div>
+                    <ul class="contact_list">
+                        <li class="contact_item">
+                            <div class="contact_icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact_text">64 Dũng sĩ thannh khê, Thanh Khê Tây, Thanh Khê, Đà Nẵng</div>
+                        </li>
+                        <li class="contact_item">
+                            <div class="contact_icon"><i class="fas fa-phone-square"></i></div>
+                            <div class="contact_text">+84 79 292 9292</div>
+                        </li>
+                        <li class="contact_item">
+                            <div class="contact_icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact_text">tourviet01@gmail.com</div>
+                        </li>
+                        <li class="contact_item">
+                            <div class="contact_icon"><i class="fas fa-globe-asia"></i></div>
+                            <div class="contact_text">www.tourviet.com</div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+
+</body>
+<!-- <script src="./main_js.js"></script> -->
+<script src="test.js"></script>
+
+
+</html>

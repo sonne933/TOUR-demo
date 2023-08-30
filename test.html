@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f9fc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .search-container {
+            background: white;
+            border-radius: 15px;
+            padding: 35px 40px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .search-input, .filter-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 16px;
+            margin-bottom: 24px;
+            transition: border-color 0.3s;
+            outline: none;
+        }
+
+        .search-input:focus, .filter-input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .filter-label {
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #4a5568;
+        }
+
+        button {
+            background-color: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #5a67d8;
+            transform: translateY(-2px);
+        }
+
+        #location-suggestions {
+            max-height: 150px;
+            overflow-y: auto;
+            border: 1px solid #e2e8f0;
+            border-top: none;
+            position: absolute;
+            background-color: white;
+            width: calc(100% - 60px);
+            border-radius: 0 0 10px 10px;
+            z-index: 1;
+        }
+
+        #location-suggestions li {
+            padding: 10px 20px;
+            cursor: pointer;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        #location-suggestions li:last-child {
+            border-bottom: none;
+        }
+
+        #location-suggestions li:hover {
+            background-color: #f7f9fc;
+        }
+
+        label.checkbox {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-size: 14px;
+            user-select: none;
+        }
+
+        label.checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        label.checkbox .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border-radius: 4px;
+        }
+
+        label.checkbox:hover input ~ .checkmark {
+            background-color: #f7f9fc;
+        }
+
+        label.checkbox input:checked ~ .checkmark {
+            background-color: #667eea;
+        }
+
+        label.checkbox .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        label.checkbox input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        label.checkbox .checkmark:after {
+            left: 7px;
+            top: 3px;
+            width: 6px;
+            height: 11px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" class="search-input" id="location" placeholder="Tìm kiếm địa điểm..." onkeyup="showSuggestions()">
+        <ul id="location-suggestions"></ul>
+        
+        <label class="filter-label" for="price">Lọc giá:</label>
+        <select class="filter-input" id="price">
+            <option value="asc">Tăng dần</option>
+            <option value="desc">Giảm dần</option>
+        </select>
+
+        <label class="filter-label">Khoảng giá:</label>
+        <label class="checkbox">
+            <input type="checkbox" id="price1">
+            <span class="checkmark"></span>
+            Dưới 1 triệu
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" id="price2">
+            <span class="checkmark"></span>
+            1 - 2 triệu
+        </label>
+        <label class="checkbox">
+            <input type="checkbox" id="price3">
+            <span class="checkmark"></span>
+            Trên 2 triệu
+        </label>
+
+        <button>Tìm kiếm</button>
+    </div>
+
+    <script>
+        const locations = ["Hà Nội", "Hồ Chí Minh", "Đà Nẵng", "Hội An", "Nha Trang", "Đà Lạt"];
+
+        function showSuggestions() {
+            const input = document.getElementById("location").value.toLowerCase();
+            const suggestions = document.getElementById("location-suggestions");
+            
+            if (input.length === 0) {
+                suggestions.innerHTML = "";
+                return;
+            }
+
+            let matchedLocations = locations.filter(loc => loc.toLowerCase().includes(input));
+
+            let html = matchedLocations.map(loc => `<li onclick="selectLocation('${loc}')">${loc}</li>`).join("");
+            suggestions.innerHTML = html;
+        }
+
+        function selectLocation(loc) {
+            document.getElementById("location").value = loc;
+            document.getElementById("location-suggestions").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
