@@ -4493,7 +4493,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 20px;
   }
   .offers_title {
-    text-align: center;
+    /* text-align: start; */
+    padding-left:200px;
     font-size: 30px;
     font-weight: 700;
     color: #2d2c2c;

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tour Viet</title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles/css/main_style.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/Animation.css"> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+
+
+<body>
+    <div class="container right-panel">
+        <!-- Sign Up -->
+        <div class="container__form container--signup">
+            <form action="#" class="form" id="form1">
+                <h2 class="form__title">Đăng Ký</h2>
+                <input type="text" placeholder="Họ và tên" class="input" />
+                <input type="email" placeholder="Email" class="input" />
+                <input type="number" placeholder="Số điện thoại" class="input" />
+                <input type="text" placeholder="Địa chỉ" class="input" />
+                <input type="password" placeholder="Mật khẩu" class="input" />
+                <button class="btn">Đăng Ký</button>
+            </form>
+        </div>
+
+        <!-- Sign In -->
+        <div class="container__form container--signin">
+            <form action="#" class="form" id="form2">
+                <h2 class="form__title">Đăng Nhập</h2>
+                <input type="email" placeholder="Email" class="input" />
+                <input type="password" placeholder="Mật khẩu" class="input" />
+                <!-- <a href="#" class="link">Đăng nhập bằng</a> -->
+                <ul class="footer_social_list">
+                    <li class="footer_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="footer_social_item"><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                    <li class="footer_social_item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+                <a href="#" class="link">Quên mật khẩu?</a>
+                <button class="btn">Đăng nhập</button>
+                
+            </form>
+        </div>
+
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                  
+                    <button class="btn" id="signIn" >Đăng nhập</button>
+                    <button class="btn btn_back" onclick="location.href='index.html'">Thoát</button>
+                </div>
+                <div class="overlay__panel overlay--right">
+                   
+                    <button class="btn" id="signUp">Đăng ký</button>
+                    <button class="btn btn_back" onclick="location.href='index.html'">Thoát</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+<script src="signup.js"></script>
+</html>

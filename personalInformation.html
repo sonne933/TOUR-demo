@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tour Viet</title>
+    <!-- <link rel="stylesheet" type="text/css" href="styles/css/main_style.css">
+    <link rel="stylesheet" type="text/css" href="styles/css/Animation.css"> -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="personalInformation.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Header -->
+        <header class="header">
+            <!-- Top Bar -->
+            <div class="top_bar">
+                <div class="bar__info">
+                    <div class="phone">+84 79 292 9292</div>
+                    <div class="social">
+                        <ul class="social_list">
+                            <li class="social_list_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="bar__user">
+                    <div class="bar__user-login"><a href="signup.html">Đăng nhập</a></div>
+                    <div class="bar__user-regis"><a href="regsiter.html">Đăng ký</a></div>
+                </div>
+            </div>
+
+            <div class="main_nav">
+                <div class="main_nav__logo"><a href="#"><img src="./images/logo.png" alt="logo"> TOUR VIET</a>
+                </div>
+                <div class="main_nav__menu">
+                    <ul class="main_nav__list">
+                        <li class="main_nav__item"><a href="index.html">TRANG CHỦ</a></li>
+                        <li class="main_nav__item"><a href="about.html">GIỚI THIỆU</a></li>
+                        <li class="main_nav__item"><a href="offers.html">ƯU ĐÃI</a></li>
+                        <li class="main_nav__item"><a href="bookingNoSignup.html">ĐẶT TOUR</a></li>
+                        <li class="main_nav__item"><a href="blog.html">TIN TỨC</a></li>
+                        <li class="main_nav__item"><a href="contact.html">LIÊN HỆ</a></li>
+
+                    </ul>
+                </div>
+                <div class="main_nav__search">
+                    <form action=""><input class="input_search" type="text"></form>
+                    <div class="search__item"><i class="fas fa-search" onclick="location.href='search.html'"></i></div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main">
+            <div class="main_offers">
+                <div class="left_main">
+
+                    <div class="user-form">
+                        <h2>Thông tin người dùng</h2>
+
+                        <label for="name">Tên:</label>
+                        <input type="text" id="name" value="Nguyễn Văn An">
+
+                        <label for="birthdate">Ngày sinh:</label>
+                        <input type="date" id="birthdate" value="2001-01-01">
+
+                        <label for="address">Địa chỉ:</label>
+                        <input type="text" id="address" value="123 Lê Lợi, Đà Nẵng">
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" value="nguyenvanan123@email.com">
+
+                        <label for="phone">Số điện thoại:</label>
+                        <input type="tel" id="phone" value="0123456789">
+
+                        <button type="submit">Cập nhật</button>
+
+                        <hr> <!-- Dòng kẻ ngang để phân cách giữa thông tin người dùng và phần đổi mật khẩu -->
+
+                        <h2>Đổi mật khẩu</h2>
+
+                        <label for="currentPassword">Mật khẩu hiện tại:</label>
+                        <input type="password" id="currentPassword">
+
+                        <label for="newPassword">Mật khẩu mới:</label>
+                        <input type="password" id="newPassword">
+
+                        <label for="confirmNewPassword">Xác nhận mật khẩu mới:</label>
+                        <input type="password" id="confirmNewPassword">
+
+                        <button type="submit">Cập nhật</button>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            <footer class="footer">
+                <button onclick="topFunction()" id="back_top" title="Go to top"><i class="fas fa-rocket"></i></button>
+                <div class="box footer__box">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <div class="logo">
+                                <a href="#"><img src="./images/logo.png" alt="">TOUR VIET</a>
+                            </div>
+                        </div>
+                        <p class="footer_about__text">
+                            TOUR VIET tự hào là một đơn vị tiêu biểu trong lĩnh vực tour du lịch đón nhận giải thưởng uy
+                            tín
+                            nhất dành cho cộng đồng doanh nghiệp Việt Nam.
+                        </p>
+                        <ul class="footer_social_list">
+                            <li class="footer_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="footer_social_item"><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                            <li class="footer_social_item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__blog">
+                        <div class="footer_title">bản tin</div>
+                        <div class="footer_blog__item">
+                            <div class="footer_blog__image"><img src="./images/footer_blog_1.jpg" alt=""></div>
+                            <div class="footer_blog__content">
+                                <div class="footer_blog__title"><a href="#">Địa điểm du lịch Hè 2023</a></div>
+                                <div class="footer_blog__date">30/07/2023</div>
+                            </div>
+                        </div>
+                        <div class="footer_blog__item">
+                            <div class="footer_blog__image"><img src="./images/footer_blog_1.jpg" alt=""></div>
+                            <div class="footer_blog__content">
+                                <div class="footer_blog__title"><a href="#">Địa điểm du lịch Hè 2023</a></div>
+                                <div class="footer_blog__date">30/07/2023</div>
+                            </div>
+                        </div>
+                        <div class="footer_blog__item">
+                            <div class="footer_blog__image"><img src="./images/footer_blog_1.jpg" alt=""></div>
+                            <div class="footer_blog__content">
+                                <div class="footer_blog__title"><a href="#">Địa điểm du lịch Hè 2023</a></div>
+                                <div class="footer_blog__date">30/07/2023</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__tags">
+                        <div class="footer_title">Tags</div>
+                        <ul class="tags_list">
+                            <li class="tags_item"><a href="#">Miền Bắc</a></li>
+                            <li class="tags_item"><a href="#">Miền Trung</a></li>
+                            <li class="tags_item"><a href="#">Miền Nam</a></li>
+                            <li class="tags_item"><a href="#">Đà Nẵng</a></li>
+                            <li class="tags_item"><a href="#">Quảng Nam</a></li>
+                            <li class="tags_item"><a href="#">Huế</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__contact">
+                        <div class="footer_title">Liên hệ</div>
+                        <ul class="contact_list">
+                            <li class="contact_item">
+                                <div class="contact_icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact_text">64 Dũng sĩ thannh khê, Thanh Khê Tây, Thanh Khê, Đà Nẵng</div>
+                            </li>
+                            <li class="contact_item">
+                                <div class="contact_icon"><i class="fas fa-phone-square"></i></div>
+                                <div class="contact_text">+84 79 292 9292</div>
+                            </li>
+                            <li class="contact_item">
+                                <div class="contact_icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact_text">tourviet01@gmail.com</div>
+                            </li>
+                            <li class="contact_item">
+                                <div class="contact_icon"><i class="fas fa-globe-asia"></i></div>
+                                <div class="contact_text">www.tourviet.com</div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+
+</body>
+<!-- <script src="./main_js.js"></script> -->
+<script src="test.js"></script>
+
+
+</html>

@@ -127,12 +127,12 @@ document.addEventListener("DOMContentLoaded", function() {
     var offer1 = document.getElementById("offer_1");
     var offer2 = document.getElementById("offer_2");
     var offer3 = document.getElementById("offer_3");
-    var offer4 = document.getElementById("offer_4");
+    // var offer4 = document.getElementById("offer_4");
     var offer5 = document.getElementById("offer_5");
     var offerBox1 = document.getElementById("offer_box_1");
     var offerBox2 = document.getElementById("offer_box_2");
     var offerBox3 = document.getElementById("offer_box_3");
-    var offerBox4 = document.getElementById("offer_box_4");
+    // var offerBox4 = document.getElementById("offer_box_4");
     var offerBox5 = document.getElementById("offer_box_5");
 
     offer1.addEventListener("mouseover", function() {
@@ -150,11 +150,11 @@ document.addEventListener("DOMContentLoaded", function() {
         offerBox3.style.visibility = "unset";
         offerBox3.style.opacity = "1";
     });
-    offer4.addEventListener("mouseover", function() {
-        offerBox4.style.top = "105%";
-        offerBox4.style.visibility = "unset";
-        offerBox4.style.opacity = "1";
-    });
+    // offer4.addEventListener("mouseover", function() {
+    //     offerBox4.style.top = "105%";
+    //     offerBox4.style.visibility = "unset";
+    //     offerBox4.style.opacity = "1";
+    // });
     offer5.addEventListener("mouseover", function() {
         offerBox5.style.top = "105%";
         offerBox5.style.visibility = "unset";
@@ -176,11 +176,11 @@ document.addEventListener("DOMContentLoaded", function() {
         offerBox3.style.top = "120%";
         offerBox3.style.visibility = "hidden";
     });
-    offer4.addEventListener("mouseout", function() {
-        offerBox4.style.opacity = "0";
-        offerBox4.style.top = "120%";
-        offerBox4.style.visibility = "hidden";
-    });
+    // offer4.addEventListener("mouseout", function() {
+    //     offerBox4.style.opacity = "0";
+    //     offerBox4.style.top = "120%";
+    //     offerBox4.style.visibility = "hidden";
+    // });
     offer5.addEventListener("mouseout", function() {
         offerBox5.style.opacity = "0";
         offerBox5.style.top = "120%";

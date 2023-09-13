@@ -14,6 +14,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="booking.css">
 </head>
 
@@ -28,15 +29,15 @@
                     <div class="social">
                         <ul class="social_list">
                             <li class="social_list_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="social_list_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fa-brands fa-google"></i></a></li>
                             <li class="social_list_item"><a href="#"><i class="fab fa-youtube"></i></a></li>
                         </ul>
                     </div>
 
                 </div>
                 <div class="bar__user">
-                    <div class="bar__user-login"><a href="login.html">login</a></div>
-                    <div class="bar__user-regis"><a href="login.html">register</a></div>
+                    <div class="bar__user-login"><a href="signup.html">Đăng nhập</a></div>
+                    <div class="bar__user-regis"><a href="signup.html">Đăng ký</a></div>
                 </div>
             </div>
 
@@ -48,7 +49,7 @@
                         <li class="main_nav__item"><a href="index.html">TRANG CHỦ</a></li>
                         <li class="main_nav__item"><a href="about.html">GIỚI THIỆU</a></li>
                         <li class="main_nav__item"><a href="offers.html">ƯU ĐÃI</a></li>
-                        <li class="main_nav__item"><a href="booking.html">ĐẶT TOUR</a></li>
+                        <li class="main_nav__item"><a href="bookingNoSignup.html">ĐẶT TOUR</a></li>
                         <li class="main_nav__item"><a href="blog.html">TIN TỨC</a></li>
                         <li class="main_nav__item"><a href="contact.html">LIÊN HỆ</a></li>
 
@@ -67,15 +68,23 @@
             <div class="main_offers">
                 <div class="left_main">
                     <div class="contact-info">
-                        <h2>Thông Tin</h2>
-                        <label><strong>Tên:</strong> </label>
-                        <input type="text" value="Hồng Sơn">
-                        <label><strong>Email:</strong></label>
-                        <input type="email" value="son@123gmail.com">
-                        <label><strong>Địa chỉ:</strong></label>
-                        <input type="text" value="Đà Nẵng">
-                        <label><strong>Số điện thoại:</strong></label>
-                        <input type="number" value="0768909018">
+                        <div class="booking-form">
+                            <h2>Thông Tin</h2>
+                            
+                            <label for="name">Tên:</label>
+                            <input type="text" id="name" value="John Doe">
+                    
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" id="address" value="Đà Nẵng">
+                    
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" value="johndoe123@email.com">
+                    
+                            <label for="phone">Số điện thoại:</label>
+                            <input type="tel" id="phone" value="0123456789">
+                    
+                           
+                        </div>
 
                         <h3>Payment Method</h3>
                         <label>
@@ -95,7 +104,7 @@
                     <h2 class="offers_title">Booking Tour</h2>
 
                     <div class="offers_items">
-                        <div class="offers_item">
+                       
                             <div class="offers_image">
                                 <div class="offers_image_background"
                                     style="background-image: url(./images/offers_1.jpg);height: 300px; width: 230[x];">
@@ -114,14 +123,14 @@
 
                                 <div class="offers_link"><a href="offers.html">Đọc thêm</a></div>
                             </div>
-                        </div>
+                        
 
                     </div>
                 </div>
             </div>
 
         </div>
-        <footer class="footer">
+        <!-- <footer class="footer">
             <button onclick="topFunction()" id="back_top" title="Go to top"><i class="fas fa-rocket"></i></button>
             <div class="box footer__box">
                 <div class="footer__about">
@@ -136,7 +145,7 @@
                     </p>
                     <ul class="footer_social_list">
                         <li class="footer_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="footer_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="footer_social_item"><a href="#"><i class="fa-brands fa-google"></i></a></li>
                         <li class="footer_social_item"><a href="#"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
@@ -198,7 +207,7 @@
                     </ul>
                 </div>
             </div>
-        </footer>
+        </footer> -->
 
     </div>
 

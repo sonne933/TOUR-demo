@@ -10,10 +10,12 @@ const btnback = document.querySelector(".btn_back");
 
 signInBtn.addEventListener("click", () => {
     container.classList.remove("right-panel-active");
+    this.location.href='signup.html';
 });
 
 signUpBtn.addEventListener("click", () => {
     container.classList.add("right-panel-active");
+    this.location.href='regsiter.html';
 });
 
 fistForm.addEventListener("submit", (e) => e.preventDefault());

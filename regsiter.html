@@ -14,7 +14,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
 
 
@@ -24,24 +24,29 @@
         <!-- Sign Up -->
         <div class="container__form container--signup">
             <form action="#" class="form" id="form1">
-                <h2 class="form__title">Sign Up</h2>
+                <h2 class="form__title">Đăng Ký</h2>
                 <input type="text" placeholder="Họ và tên" class="input" />
                 <input type="email" placeholder="Email" class="input" />
                 <input type="number" placeholder="Số điện thoại" class="input" />
                 <input type="text" placeholder="Địa chỉ" class="input" />
-                <input type="password" placeholder="Password" class="input" />
-                <button class="btn">Sign Up</button>
+                <input type="password" placeholder="Mật khẩu" class="input" />
+                <button class="btn">Đăng Ký</button>
             </form>
         </div>
 
         <!-- Sign In -->
         <div class="container__form container--signin">
-            <form action="#" class="form" id="form2">
-                <h2 class="form__title">Sign In</h2>
-                <input type="email" placeholder="Email" class="input" />
-                <input type="password" placeholder="Password" class="input" />
-                <a href="#" class="link">Forgot your password?</a>
-                <button class="btn">Sign In</button>
+            <h2 class="form__title">Đăng Nhập</h2>
+            <input type="email" placeholder="Email" class="input" />
+            <input type="password" placeholder="Mật khẩu" class="input" />
+            <!-- <a href="#" class="link">Đăng nhập bằng</a> -->
+            <ul class="footer_social_list">
+                <li class="footer_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="footer_social_item"><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                <li class="footer_social_item"><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+            <a href="#" class="link">Quên mật khẩu?</a>
+            <button class="btn">Đăng nhập</button>
                 
             </form>
         </div>
@@ -51,13 +56,13 @@
             <div class="overlay">
                 <div class="overlay__panel overlay--left">
                   
-                    <button class="btn" id="signIn">Sign In</button>
-                    <button class="btn btn_back" onclick="location.href='index.html'">Back</button>
+                    <button class="btn" id="signIn" >Đăng nhập</button>
+                    <button class="btn btn_back" onclick="location.href='index.html'">Thoát</button>
                 </div>
                 <div class="overlay__panel overlay--right">
                    
-                    <button class="btn" id="signUp">Sign Up</button>
-                    <button class="btn btn_back" onclick="location.href='index.html'">Back</button>
+                    <button class="btn" id="signUp">Đăng ký</button>
+                    <button class="btn btn_back" onclick="location.href='index.html'">Thoát</button>
                 </div>
             </div>
         </div>
@@ -66,5 +71,5 @@
 </body>
 
 
-<script src="login.js"></script>
+<script src="signup.js"></script>
 </html>
